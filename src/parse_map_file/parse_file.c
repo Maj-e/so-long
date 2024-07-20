@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_file.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smoore-a <smoore-a@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: matta <matta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 12:33:13 by smoore-a          #+#    #+#             */
-/*   Updated: 2024/05/22 19:43:12 by smoore-a         ###   ########.fr       */
+/*   Updated: 2024/07/16 15:10:35 by matta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ static void	map_size(t_data *data)
 		ft_error(data, "Empty file");
 	if (ft_strchr(line, '\n') == NULL)
 		ft_error(data, NOTVALID);
-	data->map.width = ft_strchr(line, '\n') - line;
+	data->map.width = (ft_strchr(line, '\n') - line);
 	while (line)
 	{
-		if ((ft_strchr(line, '\n') && ft_strlen(line) != data->map.width + 1) \
-		|| (!ft_strchr(line, '\n') && ft_strlen(line) != data->map.width) \
+		if ((ft_strchr(line, '\n') && (size_t)ft_strlen(line) != data->map.width + 1) \
+		|| (!ft_strchr(line, '\n') && (size_t)ft_strlen(line) != data->map.width) \
 		|| check_sections(&(data->map), line) == ERROR)
 			clean_gnl(data, &line);
 		data->map.height++;

@@ -6,7 +6,7 @@
 /*   By: matta <matta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 13:41:09 by matta             #+#    #+#             */
-/*   Updated: 2024/07/16 13:57:34 by matta            ###   ########.fr       */
+/*   Updated: 2024/07/16 15:12:04 by matta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "../libft/inc/libft.h"
 # include "../minilibx-linux/mlx.h"
 # include "fcntl.h"
+# include <string.h>
 
 # include <X11/keysym.h>
 # include <X11/X.h>

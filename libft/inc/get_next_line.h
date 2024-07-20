@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: matta <matta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 13:08:17 by mjeannin          #+#    #+#             */
-/*   Updated: 2024/05/15 14:18:47 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/07/16 15:03:49 by matta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@
 char	*process_line(char **stash);
 char	*read_from_fd(int fd);
 char	*get_next_line_helper(char **stash, int fd);
-char	*get_next_line_bonus(int fd);
+char	*get_next_line(int fd);
 
 #endif
