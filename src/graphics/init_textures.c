@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 21:01:02 by smoore-a          #+#    #+#             */
-/*   Updated: 2024/07/30 18:02:41 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/07/30 21:01:06 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ static void	xpm_to_img(t_data *data, t_img *texture, char *path)
 
 void	convert_xpm(t_data *data)
 {
-	xpm_to_img(data, &(data->texture.border), "64_px_xpm/wall.xpm");
-	xpm_to_img(data, &(data->texture.collectible), "64_px_xpm/item.xpm");
-	xpm_to_img(data, &(data->texture.ground), "64_px_xpm/wall.xpm"); //background
-	xpm_to_img(data, &(data->texture.exit), "64_px_xpm/close.xpm");
-	xpm_to_img(data, &(data->texture.player), "64_px_xpm/bat2r.xpm");
+	xpm_to_img(data, &(data->texture.border), "textures/64px_xpm/wall.xpm");
+	xpm_to_img(data, &(data->texture.collectible), "textures/64px_xpm/item.xpm");
+	xpm_to_img(data, &(data->texture.ground), "textures/ground.xpm");
+	xpm_to_img(data, &(data->texture.exit), "textures/64px_xpm/close.xpm");
+	xpm_to_img(data, &(data->texture.player), "textures/64px_xpm/bat2r.xpm");
 }
