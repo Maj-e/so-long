@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   cleanup.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smoore-a <smoore-a@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/13 12:05:31 by smoore-a          #+#    #+#             */
-/*   Updated: 2024/05/23 12:39:44 by smoore-a         ###   ########.fr       */
+/*   Created: 2024/07/30 21:08:54 by mjeannin          #+#    #+#             */
+/*   Updated: 2024/07/30 21:08:55 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include "../../include/so_long.h"
 

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smoore-a <smoore-a@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/13 13:53:35 by smoore-a          #+#    #+#             */
-/*   Updated: 2024/05/22 12:59:10 by smoore-a         ###   ########.fr       */
+/*   Created: 2024/07/30 21:07:43 by mjeannin          #+#    #+#             */
+/*   Updated: 2024/07/30 21:07:44 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "../../include/so_long.h"
 
