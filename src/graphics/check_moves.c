@@ -6,11 +6,17 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 21:07:49 by mjeannin          #+#    #+#             */
-/*   Updated: 2024/07/30 23:32:06 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/07/31 15:19:23 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/so_long.h"
+
+void		check_collec(t_data *data)
+{
+	if (data->player.collecs == data->map.collecs)
+		data->status.exit = 1;
+}
 
 void	check_up(t_data *data, t_coord *coord)
 {
@@ -54,6 +60,7 @@ void	check_right(t_data *data, t_coord *coord)
 			ft_printf("Moves: %d\n", (int)data->player.moves);
 		}
 	}
+	check_collec(data);
 }
 
 void	check_down(t_data *data, t_coord *coord)

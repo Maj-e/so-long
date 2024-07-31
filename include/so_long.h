@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matta <matta@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 13:41:09 by matta             #+#    #+#             */
-/*   Updated: 2024/07/16 15:12:04 by matta            ###   ########.fr       */
+/*   Updated: 2024/07/31 16:21:06 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,14 @@ typedef struct s_coord
 	size_t	y;
 	size_t	x;
 }	t_coord;
+
+typedef struct s_status
+{
+	int side;
+	int fly;
+	int exit;
+	t_coord coord;
+}	t_status;
 
 typedef struct s_player
 {
@@ -72,8 +80,12 @@ typedef struct s_texture
 	t_img	border;
 	t_img	ground;
 	t_img	exit;
+	t_img	exit2;
 	t_img	collectible;
-	t_img	player;
+	t_img	bat1r;
+	t_img	bat2r;
+	t_img	bat1l;
+	t_img	bat2l;
 }	t_texture;
 
 typedef struct s_data
@@ -82,6 +94,7 @@ typedef struct s_data
 	void		*mlx_win;
 	t_texture	texture;
 	t_map		map;
+	t_status	status;
 	t_player	player;
 }	t_data;
 
@@ -128,5 +141,8 @@ void	openf(t_data *data);
 void	closef(t_data *data);
 // \__utils
 void	print_map(char **map);
+// \__status
+void	check_open(t_data *data);
+void 	move_status(t_data *data);
 
 #endif

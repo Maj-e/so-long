@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: smoore-a <smoore-a@student.42malaga.com    +#+  +:+       +#+         #
+#    By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/27 20:48:30 by smoore-a          #+#    #+#              #
-#    Updated: 2024/06/08 14:27:41 by smoore-a         ###   ########.fr        #
+#    Updated: 2024/07/31 15:25:53 by mjeannin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ SRC = main
 PARSE_FILE = check_map check_path open_close_file parse_file
 
 GRAPHICS = init_window init_textures draw_map draw_sections \
-	check_moves end_game
+	check_moves end_game status
 
 UTILS = cleanup error utils
 

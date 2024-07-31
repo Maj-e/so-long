@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 21:08:54 by mjeannin          #+#    #+#             */
-/*   Updated: 2024/07/30 21:08:55 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:10:31 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,16 @@ static void	destroy_imgs(t_data *data)
 		mlx_destroy_image(data->mlx, data->texture.exit.img);
 	if (data->texture.ground.img)
 		mlx_destroy_image(data->mlx, data->texture.ground.img);
-	if (data->texture.player.img)
-		mlx_destroy_image(data->mlx, data->texture.player.img);
+	if (data->texture.bat1l.img)
+		mlx_destroy_image(data->mlx, data->texture.bat1l.img);
+	if (data->texture.bat2l.img)
+		mlx_destroy_image(data->mlx, data->texture.bat2l.img);
+	if (data->texture.bat1r.img)
+		mlx_destroy_image(data->mlx, data->texture.bat1r.img);
+	if (data->texture.bat2r.img)
+		mlx_destroy_image(data->mlx, data->texture.bat2r.img);
+	
+		
 }
 
 void	terminate(t_data *data)
