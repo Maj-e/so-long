@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 21:08:20 by mjeannin          #+#    #+#             */
-/*   Updated: 2024/07/31 16:08:07 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/07/31 18:55:14 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,6 @@ void	convert_xpm(t_data *data)
 	xpm_to_img(data, &(data->texture.bat2l), "textures/64px_xpm/bat2l.xpm");
 	xpm_to_img(data, &(data->texture.bat1r), "textures/64px_xpm/bat1r.xpm");
 	xpm_to_img(data, &(data->texture.bat1l), "textures/64px_xpm/bat1l.xpm");
+	xpm_to_img(data, &(data->texture.vampr), "textures/64px_xpm/vampr.xpm");
+	xpm_to_img(data, &(data->texture.vampl), "textures/64px_xpm/vampl.xpm");
 }

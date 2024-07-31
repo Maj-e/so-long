@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 13:41:09 by matta             #+#    #+#             */
-/*   Updated: 2024/07/31 16:21:06 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/07/31 18:55:40 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,8 @@ typedef struct s_texture
 	t_img	bat2r;
 	t_img	bat1l;
 	t_img	bat2l;
+	t_img	vampr;
+	t_img	vampl;
 }	t_texture;
 
 typedef struct s_data
