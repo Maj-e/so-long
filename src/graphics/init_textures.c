@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 21:08:20 by mjeannin          #+#    #+#             */
-/*   Updated: 2024/07/31 18:55:14 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/08/05 22:10:52 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,19 @@ static void	xpm_to_img(t_data *data, t_img *texture, char *path)
 
 void	convert_xpm(t_data *data)
 {
-	xpm_to_img(data, &(data->texture.border), "textures/64px_xpm/wall.xpm");
-	xpm_to_img(data, &(data->texture.collectible), "textures/64px_xpm/item.xpm");
-	xpm_to_img(data, &(data->texture.ground), "textures/ground.xpm");
-	xpm_to_img(data, &(data->texture.exit), "textures/64px_xpm/close.xpm");
-	xpm_to_img(data, &(data->texture.exit2), "textures/64px_xpm/open.xpm");
-	xpm_to_img(data, &(data->texture.bat2r), "textures/64px_xpm/bat2r.xpm");
-	xpm_to_img(data, &(data->texture.bat2l), "textures/64px_xpm/bat2l.xpm");
-	xpm_to_img(data, &(data->texture.bat1r), "textures/64px_xpm/bat1r.xpm");
-	xpm_to_img(data, &(data->texture.bat1l), "textures/64px_xpm/bat1l.xpm");
-	xpm_to_img(data, &(data->texture.vampr), "textures/64px_xpm/vampr.xpm");
-	xpm_to_img(data, &(data->texture.vampl), "textures/64px_xpm/vampl.xpm");
+	xpm_to_img(data, &(data->texture.border), "textures/xpm/wall.xpm");
+	xpm_to_img(data, &(data->texture.collectible), "textures/xpm/item.xpm");
+	xpm_to_img(data, &(data->texture.ground), "textures/xpm/ground.xpm");
+	xpm_to_img(data, &(data->texture.exit), "textures/xpm/close.xpm");
+	xpm_to_img(data, &(data->texture.exit2), "textures/xpm/open.xpm");
+	xpm_to_img(data, &(data->texture.bat2r), "textures/xpm/bat2r.xpm");
+	xpm_to_img(data, &(data->texture.bat2l), "textures/xpm/bat2l.xpm");
+	xpm_to_img(data, &(data->texture.bat1r), "textures/xpm/bat1r.xpm");
+	xpm_to_img(data, &(data->texture.bat1l), "textures/xpm/bat1l.xpm");
+	xpm_to_img(data, &(data->texture.vampr), "textures/xpm/vampr.xpm");
+	xpm_to_img(data, &(data->texture.vampl), "textures/xpm/vampl.xpm");
+	xpm_to_img(data, &(data->texture.paladinR), "textures/xpm/paladinR.xpm");
+	xpm_to_img(data, &(data->texture.paladinL), "textures/xpm/paladinL.xpm");
+	xpm_to_img(data, &(data->texture.fireL), "textures/xpm/fireL.xpm");
+	xpm_to_img(data, &(data->texture.fireR), "textures/xpm/fireR.xpm");
 }

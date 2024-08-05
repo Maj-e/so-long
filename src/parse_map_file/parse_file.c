@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 21:08:46 by mjeannin          #+#    #+#             */
-/*   Updated: 2024/07/30 21:08:49 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/08/05 20:08:43 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,7 @@ static void	map_size(t_data *data)
 	data->map.width = (ft_strchr(line, '\n') - line);
 	while (line)
 	{
-		if ((ft_strchr(line, '\n') && (size_t)ft_strlen(line) != data->map.width + 1) \
-		|| (!ft_strchr(line, '\n') && (size_t)ft_strlen(line) != data->map.width) \
+		if (!is_line_length_valid(line, data->map.width) \
 		|| check_sections(&(data->map), line) == ERROR)
 			clean_gnl(data, &line);
 		data->map.height++;

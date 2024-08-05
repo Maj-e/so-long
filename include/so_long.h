@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 13:41:09 by matta             #+#    #+#             */
-/*   Updated: 2024/07/31 18:55:40 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/08/05 22:40:35 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include "../minilibx-linux/mlx.h"
 # include "fcntl.h"
 # include <string.h>
+# include <stdbool.h>
+
 
 # include <X11/keysym.h>
 # include <X11/X.h>
@@ -37,6 +39,8 @@ typedef struct s_coord
 {
 	size_t	y;
 	size_t	x;
+	size_t  ey;
+	size_t	ex;
 }	t_coord;
 
 typedef struct s_status
@@ -66,6 +70,7 @@ typedef struct s_map
 	size_t	player;
 	size_t	walls;
 	size_t	spaces;
+	size_t	ennemies;
 }	t_map;
 
 typedef struct s_img
@@ -88,7 +93,17 @@ typedef struct s_texture
 	t_img	bat2l;
 	t_img	vampr;
 	t_img	vampl;
+	t_img	paladinR;
+	t_img	paladinL;
+	t_img	fireL;
+	t_img	fireR;
 }	t_texture;
+
+typedef struct s_pos
+{
+	int fire_x;
+	int fire_y;
+}	t_pos;
 
 typedef struct s_data
 {
@@ -98,12 +113,14 @@ typedef struct s_data
 	t_map		map;
 	t_status	status;
 	t_player	player;
+	t_pos		pos;
 }	t_data;
 
 //\PARSE_MAP_FILE
 // \__parse_file
 void	print_map(char **map);
 void	parse_file(t_data *data, int argc, char **argv);
+bool	is_line_length_valid(const char *line, size_t width);
 // \__check_map
 int		check_sections(t_map *map, char *line);
 void	check_map(t_data *data);
@@ -123,7 +140,10 @@ void	draw_ground(t_data *data, int x, int y);
 void	draw_collectible(t_data *data, int x, int y);
 void	draw_border(t_data *data, int x, int y);
 void	draw_exit(t_data *data, int x, int y);
+// \__draw_player
 void	draw_player(t_data *data, int x, int y);
+void	draw_player_fly_status(t_data *data, int x, int y);
+void	draw_player_exit_status(t_data *data, int x, int y);
 // \__check_moves
 void	check_up(t_data *data, t_coord *coord);
 void	check_right(t_data *data, t_coord *coord);
@@ -131,7 +151,8 @@ void	check_down(t_data *data, t_coord *coord);
 void	check_left(t_data *data, t_coord *coord);
 // \__end_game
 void	end_game(t_data *data);
-
+// \__ennemies
+void    draw_ennemies(t_data *data, int x, int y);
 //\UTILS
 // \__cleanup
 void	free_map(char **map);

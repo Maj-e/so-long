@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   status.c                                           :+:      :+:    :+:   */
+/*   lines.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/05 19:55:41 by mjeannin          #+#    #+#             */
-/*   Updated: 2024/08/05 21:32:25 by mjeannin         ###   ########.fr       */
+/*   Created: 2024/08/05 20:08:58 by mjeannin          #+#    #+#             */
+/*   Updated: 2024/08/05 20:09:16 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../../include/so_long.h"
 
-void	check_open(t_data *data)
+bool	is_line_length_valid(const char *line, size_t width)
 {
-	if (data->player.collecs == data->map.collecs)
+	if (ft_strchr(line, '\n'))
 	{
-		data->status.exit = 1;
-		draw_map(data);
+		return ((size_t)ft_strlen(line) == width + 1);
 	}
-}
-
-void	move_status(t_data *data)
-{
-	if (data->status.fly == 0)
-		data->status.fly = 1;
-	else if (data->status.fly == 1)
-		data->status.fly = 0;
+	else
+	{
+		return ((size_t)ft_strlen(line) == width);
+	}
 }

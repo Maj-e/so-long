@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "mlx_int.h": "c",
-        "xkblib.h": "c"
+        "xkblib.h": "c",
+        "cstdlib": "c"
     }
 }

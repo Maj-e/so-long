@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 21:07:43 by mjeannin          #+#    #+#             */
-/*   Updated: 2024/08/05 19:55:27 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/08/05 21:56:59 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	check_sections(t_map *map, char *line)
 			map->walls++;
 		else if (*line == '0')
 			map->spaces++;
+		else if (*line == 'D')
+			map->ennemies++;
 		else
 			return (ERROR);
 		line++;

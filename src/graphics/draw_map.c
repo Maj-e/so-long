@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 21:07:58 by mjeannin          #+#    #+#             */
-/*   Updated: 2024/08/05 19:59:28 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/08/05 22:21:47 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	draw_map(t_data *data)
 				draw_collectible(data, j, i);
 			else if (data->map.mtrx[i][j] == 'E')
 				draw_exit(data, j, i);
+			else if (data->map.mtrx[i][j] == 'D')
+				draw_ennemies(data, j, i);
 			else if (data->map.mtrx[i][j] == 'P')
 				draw_player(data, j, i);
 		}

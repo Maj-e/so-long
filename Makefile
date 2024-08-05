@@ -6,7 +6,7 @@
 #    By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/27 20:48:30 by smoore-a          #+#    #+#              #
-#    Updated: 2024/07/31 15:25:53 by mjeannin         ###   ########.fr        #
+#    Updated: 2024/08/05 21:36:49 by mjeannin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,10 +37,10 @@ OBJ_DIR = obj/
 
 SRC = main
 
-PARSE_FILE = check_map check_path open_close_file parse_file
+PARSE_FILE = check_map check_path open_close_file parse_file lines
 
 GRAPHICS = init_window init_textures draw_map draw_sections \
-	check_moves end_game status
+	check_moves end_game status draw_player ennemies
 
 UTILS = cleanup error utils
 
