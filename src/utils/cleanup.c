@@ -6,11 +6,9 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 21:08:54 by mjeannin          #+#    #+#             */
-/*   Updated: 2024/07/31 16:10:31 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/08/05 19:54:51 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "../../include/so_long.h"
 
@@ -48,8 +46,6 @@ static void	destroy_imgs(t_data *data)
 		mlx_destroy_image(data->mlx, data->texture.bat1r.img);
 	if (data->texture.bat2r.img)
 		mlx_destroy_image(data->mlx, data->texture.bat2r.img);
-	
-		
 }
 
 void	terminate(t_data *data)
