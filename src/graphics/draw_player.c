@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 20:50:14 by mjeannin          #+#    #+#             */
-/*   Updated: 2024/08/05 22:15:44 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/08/27 18:52:13 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ void	draw_player_exit_status(t_data *data, int x, int y)
 void	draw_player(t_data *data, int x, int y)
 {
 	if (data->status.exit == 0)
-    {
+	{
 		draw_player_fly_status(data, x, y);
 	}
 	else if (data->status.exit == 1)
-    {
+	{
 		draw_player_exit_status(data, x, y);
 	}
 }

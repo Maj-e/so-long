@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 21:08:20 by mjeannin          #+#    #+#             */
-/*   Updated: 2024/08/05 22:10:52 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/08/27 18:47:13 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ void	convert_xpm(t_data *data)
 	xpm_to_img(data, &(data->texture.bat1l), "textures/xpm/bat1l.xpm");
 	xpm_to_img(data, &(data->texture.vampr), "textures/xpm/vampr.xpm");
 	xpm_to_img(data, &(data->texture.vampl), "textures/xpm/vampl.xpm");
-	xpm_to_img(data, &(data->texture.paladinR), "textures/xpm/paladinR.xpm");
-	xpm_to_img(data, &(data->texture.paladinL), "textures/xpm/paladinL.xpm");
-	xpm_to_img(data, &(data->texture.fireL), "textures/xpm/fireL.xpm");
-	xpm_to_img(data, &(data->texture.fireR), "textures/xpm/fireR.xpm");
+	xpm_to_img(data, &(data->texture.paladinr), "textures/xpm/paladinr.xpm");
+	xpm_to_img(data, &(data->texture.paladinl), "textures/xpm/paladinl.xpm");
+	xpm_to_img(data, &(data->texture.firel), "textures/xpm/firel.xpm");
+	xpm_to_img(data, &(data->texture.firer), "textures/xpm/firer.xpm");
 }

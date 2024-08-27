@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 13:41:09 by matta             #+#    #+#             */
-/*   Updated: 2024/08/05 22:40:35 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/08/27 18:54:56 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include "fcntl.h"
 # include <string.h>
 # include <stdbool.h>
-
 
 # include <X11/keysym.h>
 # include <X11/X.h>
@@ -39,16 +38,16 @@ typedef struct s_coord
 {
 	size_t	y;
 	size_t	x;
-	size_t  ey;
+	size_t	ey;
 	size_t	ex;
 }	t_coord;
 
 typedef struct s_status
 {
-	int side;
-	int fly;
-	int exit;
-	t_coord coord;
+	int		side;
+	int		fly;
+	int		exit;
+	t_coord	coord;
 }	t_status;
 
 typedef struct s_player
@@ -93,16 +92,16 @@ typedef struct s_texture
 	t_img	bat2l;
 	t_img	vampr;
 	t_img	vampl;
-	t_img	paladinR;
-	t_img	paladinL;
-	t_img	fireL;
-	t_img	fireR;
+	t_img	paladinr;
+	t_img	paladinl;
+	t_img	firel;
+	t_img	firer;
 }	t_texture;
 
 typedef struct s_pos
 {
-	int fire_x;
-	int fire_y;
+	int	fire_x;
+	int	fire_y;
 }	t_pos;
 
 typedef struct s_data
@@ -152,7 +151,7 @@ void	check_left(t_data *data, t_coord *coord);
 // \__end_game
 void	end_game(t_data *data);
 // \__ennemies
-void    draw_ennemies(t_data *data, int x, int y);
+void	draw_ennemies(t_data *data, int x, int y);
 //\UTILS
 // \__cleanup
 void	free_map(char **map);
@@ -166,6 +165,6 @@ void	closef(t_data *data);
 void	print_map(char **map);
 // \__status
 void	check_open(t_data *data);
-void 	move_status(t_data *data);
+void	move_status(t_data *data);
 
 #endif

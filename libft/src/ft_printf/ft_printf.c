@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 20:46:20 by mjeannin          #+#    #+#             */
-/*   Updated: 2024/07/30 22:45:42 by mjeannin         ###   ########.fr       */
+/*   Updated: 2024/08/27 18:52:53 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	print_format(char spec, va_list arp)
 	else if (spec == 's')
 		count += print_str(va_arg(arp, char *));
 	else if (spec == 'd')
-		count += print_digit((long)(va_arg(arp, int)),  );
+		count += print_digit((long)(va_arg(arp, int)), 10);
 	else if (spec == 'x')
 		count += print_digit((long)(va_arg(arp, unsigned int)), 16);
 	else if (spec == 'X')
