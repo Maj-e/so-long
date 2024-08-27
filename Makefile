@@ -5,16 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/02/27 20:48:30 by smoore-a          #+#    #+#              #
-#    Updated: 2024/08/05 21:36:49 by mjeannin         ###   ########.fr        #
+#    Created: 2024/08/27 19:09:52 by mjeannin          #+#    #+#              #
+#    Updated: 2024/08/27 19:09:57 by mjeannin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
 
 INCLUDE = -Iinclude -Ilibft/include -I/usr/include -Iminilibx-linux
-
-HEADER = so_long.h
 
 CC = clang
 
@@ -62,7 +60,7 @@ $(NAME): $(MLX) $(LIBFT) $(OBJ_FILES)
 	$(CC) $(INCLUDE) $^ $(MLX_FLAGS) $(LIBFT_FLAGS) -o $@
 	@echo "$(NAME) compiled"
 
-$(OBJ_DIR)%.o: %.c $(HEADER)
+$(OBJ_DIR)%.o: %.c
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 	@echo "$< compiled"
