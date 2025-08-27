@@ -6,7 +6,7 @@
 #    By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/27 19:09:52 by mjeannin          #+#    #+#              #
-#    Updated: 2024/08/27 19:09:57 by mjeannin         ###   ########.fr        #
+#    Updated: 2025/08/27 12:55:40 by mjeannin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,8 +69,12 @@ $(LIBFT):
 	@make all -C libft
 	@echo "$(LIBFT) compiled"
 
+
 $(MLX):
-	@make all -C minilibx-linux
+	@if [ ! -d "minilibx-linux" ]; then \
+		git clone https://github.com/42Paris/minilibx-linux.git; \
+	fi
+	@make -C minilibx-linux
 	@echo "$(MLX) compiled"
 
 clean:
@@ -86,6 +90,8 @@ fclean: clean
 	@echo "$(LIBFT) removed"
 	@make clean -C minilibx-linux
 	@echo "$(MLX) compiled"
+	$(RM) minilibx-linux
+	@echo "minilibx-linux directory removed"
 
 re: fclean all
 

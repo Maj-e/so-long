@@ -6,7 +6,7 @@
 /*   By: mjeannin <mjeannin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 13:41:09 by matta             #+#    #+#             */
-/*   Updated: 2024/08/27 18:54:56 by mjeannin         ###   ########.fr       */
+/*   Updated: 2025/08/27 13:02:19 by mjeannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,6 +163,7 @@ void	openf(t_data *data);
 void	closef(t_data *data);
 // \__utils
 void	print_map(char **map);
+void	apply_gravity_to_player(t_data *data);
 // \__status
 void	check_open(t_data *data);
 void	move_status(t_data *data);
